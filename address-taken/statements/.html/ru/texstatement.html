@@ -1,0 +1,186 @@
+<div class="problem-statement problem-statement_type_markdown">
+    <div class="header">
+        <h1 class="title">Адрес занят</h1>
+        <table class="limits">
+            <tbody>
+                <tr class="time-limit">
+                    <td class="property-title">Ограничение времени</td>
+                    <td>2 секунды</td>
+                </tr>
+                <tr class="memory-limit">
+                    <td class="property-title">Ограничение памяти</td>
+                    <td>64.0 Мб</td>
+                </tr>
+                <tr class="input-file">
+                    <td class="property-title">Ввод</td>
+                    <td colSpan="1">стандартный ввод или input.txt</td>
+                </tr>
+                <tr class="output-file">
+                    <td class="property-title">Вывод</td>
+                    <td colSpan="1">стандартный вывод или output.txt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2></h2>
+    <div class="legend">
+        <div class="Markdown">
+            <p class="paragraph">В Берляндию наконец-то провели интернет! Уже открылись два почтовых сервиса: Bmail и Bandex (изначально на них никто не зарегистрирован). Теперь все <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> жителей Берляндии хотят зарегистрировать себе по почтовому ящику. Каждый из них уже придумал себе желаемый почтовый адрес, но, к несчастью, некоторые из них могли совпасть. Все берляндцы по очереди пытаются зарегистрировать свои адреса, и каждый из них действует по следующему алгоритму:</p>
+            <ul>
+                <li>сначала берляндец пробует зарегистрировать свой адрес на Bmail (так как этот сервис считается более престижным),</li>
+                <li>если на Bmail такой адрес уже зарегистрирован, то пробует зарегистрировать его на Bandex,</li>
+                <li>если он зарегистрирован и там, то сдаётся и остаётся без почтового ящика.</li>
+            </ul>
+            <p class="paragraph">Для каждого берляндца определите, сможет ли он зарегистрировать адрес и на каком сервисе.</p>
+        </div>
+    </div>
+    <h2>Формат ввода</h2>
+    <div class="input-specification">
+        <div class="Markdown">
+            <p class="paragraph">В первой строке дано целое число <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <mo>≤</mo>
+                                    <mi>N</mi>
+                                    <mo>≤</mo>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">1 \leq N \leq 10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>), затем даны <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> непустых строк, состоящих из строчных латинских букв и цифр — желаемые адреса берляндцев в том порядке, в каком они будут их регистрировать (каждый на отдельной строке). Суммарная длина всех адресов не превышает <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> символов.</p>
+        </div>
+    </div>
+    <h2>Формат вывода</h2>
+    <div class="output-specification">
+        <div class="Markdown">
+            <p class="paragraph">Для каждого из <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> берляндцев выведите на отдельной строке <code>BMAIL</code> или <code>BANDEX</code>, если он зарегистрируется на соответствующем сервисе, или <code>FAIL</code>, если не сможет это сделать ни на одном из них.</p>
+        </div>
+    </div>
+    <h2></h2>
+    <div>
+        <h3 class="sample-tests-header">Пример 1</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>1
+alice
+</pre>
+                    </td>
+                    <td>
+                        <pre>BMAIL
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 2</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>4
+alice
+b0b
+carol
+b0b
+</pre>
+                    </td>
+                    <td>
+                        <pre>BMAIL
+BMAIL
+BMAIL
+BANDEX
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 3</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>3
+alice
+alice
+alice
+</pre>
+                    </td>
+                    <td>
+                        <pre>BMAIL
+BANDEX
+FAIL
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

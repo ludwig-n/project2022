@@ -1,0 +1,182 @@
+<div class="problem-statement problem-statement_type_markdown">
+    <div class="header">
+        <h1 class="title">Мороженое</h1>
+        <table class="limits">
+            <tbody>
+                <tr class="time-limit">
+                    <td class="property-title">Ограничение времени</td>
+                    <td>1 секунда</td>
+                </tr>
+                <tr class="memory-limit">
+                    <td class="property-title">Ограничение памяти</td>
+                    <td>64.0 Мб</td>
+                </tr>
+                <tr class="input-file">
+                    <td class="property-title">Ввод</td>
+                    <td colSpan="1">стандартный ввод или input.txt</td>
+                </tr>
+                <tr class="output-file">
+                    <td class="property-title">Вывод</td>
+                    <td colSpan="1">стандартный вывод или output.txt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2></h2>
+    <div class="legend">
+        <div class="Markdown">
+            <p class="paragraph">Васе захотелось мороженого. В Васином городе продаются разнообразные вкусы мороженого, и один и тот же вкус может продаваться в разных магазинах по разным ценам.</p>
+            <p class="paragraph">Вася твёрдо решил попробовать каждый вкус мороженого, который увидит. Однако переплачивать за них он тоже не хочет. Определите, какую минимальную сумму придётся заплатить Васе, чтобы купить по одному мороженому каждого вкуса.</p>
+        </div>
+    </div>
+    <h2>Формат ввода</h2>
+    <div class="input-specification">
+        <div class="Markdown">
+            <p class="paragraph">В первой строке дано целое число <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <mo>≤</mo>
+                                    <mi>N</mi>
+                                    <mo>≤</mo>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">1 \leq N \leq 10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>) — суммарное число мороженых, которые продаются в Васином городе. В каждой из следующих <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> строк даны непустая строка и целое число, разделённые пробелом — название вкуса мороженого и цена (в рублях), по которой оно продаётся. Все названия вкусов состоят из строчных латинских букв. Суммарная длина всех названий вкусов не превышает <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> символов. Все цены находятся в диапазоне от <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                </mrow>
+                                <annotation encoding="application/x-tex">1</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span> до <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>9</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">10^9</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span> рублей (инфляция, что поделать).</p>
+        </div>
+    </div>
+    <h2>Формат вывода</h2>
+    <div class="output-specification">
+        <div class="Markdown">
+            <p class="paragraph">Выведите минимальную суммарную стоимость в рублях, которую придётся заплатить Васе, чтобы купить по одному мороженому каждого вкуса.</p>
+        </div>
+    </div>
+    <h2></h2>
+    <div>
+        <h3 class="sample-tests-header">Пример 1</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>4
+vanilla 2
+chocolate 6
+chocolate 3
+vanilla 4
+</pre>
+                    </td>
+                    <td>
+                        <pre>5
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 2</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>3
+vanilla 7
+chocolate 7
+strawberry 7
+</pre>
+                    </td>
+                    <td>
+                        <pre>21
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 3</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>3
+vanilla 1
+vanilla 2
+vanilla 3
+</pre>
+                    </td>
+                    <td>
+                        <pre>1
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

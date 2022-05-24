@@ -1,0 +1,199 @@
+<div class="problem-statement problem-statement_type_markdown">
+    <div class="header">
+        <h1 class="title">Рифма</h1>
+        <table class="limits">
+            <tbody>
+                <tr class="time-limit">
+                    <td class="property-title">Ограничение времени</td>
+                    <td>1 секунда</td>
+                </tr>
+                <tr class="memory-limit">
+                    <td class="property-title">Ограничение памяти</td>
+                    <td>64.0 Мб</td>
+                </tr>
+                <tr class="input-file">
+                    <td class="property-title">Ввод</td>
+                    <td colSpan="1">стандартный ввод или input.txt</td>
+                </tr>
+                <tr class="output-file">
+                    <td class="property-title">Вывод</td>
+                    <td colSpan="1">стандартный вывод или output.txt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2></h2>
+    <div class="legend">
+        <div class="Markdown">
+            <p class="paragraph">На престол вступает <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>K</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">K</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>-ая королева Берляндии. Традиционно на коронации зачитывается поэма в честь нового монарха. Естественно, строчки в поэме должны рифмоваться. Каждый новый правитель хочет, чтобы его поэма была красивее, чем все предыдущие, а значит, строчки в ней должны рифмоваться ещё лучше. <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>K</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">K</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span>-ая королева Берляндии считает, что две строки рифмуются, если выполняются следующие два условия:</p>
+            <ul>
+                <li>Длина обеих строк не меньше <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                    <mrow>
+                                        <mi>K</mi>
+                                    </mrow>
+                                    <annotation encoding="application/x-tex">K</annotation>
+                                </semantics>
+                            </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> символов.</li>
+                <li>Последние <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <semantics>
+                                    <mrow>
+                                        <mi>K</mi>
+                                    </mrow>
+                                    <annotation encoding="application/x-tex">K</annotation>
+                                </semantics>
+                            </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> символов обеих строк совпадают.</li>
+            </ul>
+            <p class="paragraph">Со временем число <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>K</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">K</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> стало настолько большим, что проверять вручную, рифмуются ли две строки из поэмы, стало занимать слишком много времени. Поэтому эту задачу поручили вам как придворному программисту.</p>
+        </div>
+    </div>
+    <h2>Формат ввода</h2>
+    <div class="input-specification">
+        <div class="Markdown">
+            <p class="paragraph">В первой строке дано целое число <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>K</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">K</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span></span></span></span> (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <mo>≤</mo>
+                                    <mi>K</mi>
+                                    <mo>≤</mo>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">1 \leq K \leq 10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>), затем даны две строки длиной от <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>0</mn>
+                                </mrow>
+                                <annotation encoding="application/x-tex">0</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> до <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> символов включительно, каждая на отдельной строке. Строки могут содержать заглавные и строчные латинские буквы, цифры, пробелы и знаки препинания в ASCII (<code>!&quot;#$%&amp;&#x27;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</code>).</p>
+        </div>
+    </div>
+    <h2>Формат вывода</h2>
+    <div class="output-specification">
+        <div class="Markdown">
+            <p class="paragraph">Выведите <code>YES</code>, если эти две строки рифмуются, и <code>NO</code> иначе.</p>
+        </div>
+    </div>
+    <h2></h2>
+    <div>
+        <h3 class="sample-tests-header">Пример 1</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>2
+palka
+seledka
+</pre>
+                    </td>
+                    <td>
+                        <pre>YES
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 2</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>3
+palka
+seledka
+</pre>
+                    </td>
+                    <td>
+                        <pre>NO
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 3</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>1000
+palka
+palka
+</pre>
+                    </td>
+                    <td>
+                        <pre>NO
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

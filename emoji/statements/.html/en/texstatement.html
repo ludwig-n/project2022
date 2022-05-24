@@ -1,0 +1,141 @@
+<div class="problem-statement problem-statement_type_markdown">
+    <div class="header">
+        <h1 class="title">Emoji</h1>
+        <table class="limits">
+            <tbody>
+                <tr class="time-limit">
+                    <td class="property-title">Time limit</td>
+                    <td>1 second</td>
+                </tr>
+                <tr class="memory-limit">
+                    <td class="property-title">Memory limit</td>
+                    <td>64.0 MB</td>
+                </tr>
+                <tr class="input-file">
+                    <td class="property-title">Input</td>
+                    <td colSpan="1">stdin or input.txt</td>
+                </tr>
+                <tr class="output-file">
+                    <td class="property-title">Output</td>
+                    <td colSpan="1">stdout or output.txt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2></h2>
+    <div class="legend">
+        <div class="Markdown">
+            <p class="paragraph">In some messaging apps (such as Telegram, Discord and Slack) emoji can be written as a string (the name of the emoji) enclosed between colons. For example, <code>:smile:</code> turns into 😄 and <code>:christmas_tree:</code> turns into 🎄.</p>
+            <p class="paragraph">You are working on a project analyzing emoji. You are given a text containing emoji written in this form. Your goal is to extract the names of the emoji from the text.</p>
+        </div>
+    </div>
+    <h2>Input format</h2>
+    <div class="input-specification">
+        <div class="Markdown">
+            <p class="paragraph">One string <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>0</mn>
+                                </mrow>
+                                <annotation encoding="application/x-tex">0</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> to <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> characters long (inclusive) is given. The string may contain uppercase and lowercase Latin letters, digits, spaces and ASCII punctuation (<code>!&quot;#$%&amp;&#x27;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</code>). The string contains several (possibly zero) emoji written in the form <code>:emoji_name:</code> where</p>
+            <ul>
+                <li><code>emoji_name</code> is a nonempty string that does not contain spaces or colons (the name of the emoji),</li>
+                <li>the first colon is always preceded by a space or the beginning of the string,</li>
+                <li>the second colon is always followed by a space or the end of the string.</li>
+            </ul>
+            <p class="paragraph">It is guaranteed that each colon in the string is part of an emoji.</p>
+        </div>
+    </div>
+    <h2>Output format</h2>
+    <div class="output-specification">
+        <div class="Markdown">
+            <p class="paragraph">Output the names of the emoji in the order that they appear in the text, each on a separate line. Do not output colons. If the same emoji was used multiple times, you have to output its name multiple times.</p>
+        </div>
+    </div>
+    <h2></h2>
+    <div>
+        <h3 class="sample-tests-header">Sample 1</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>To be, or not to be, :thinking: that :arrow_left: is the question :question:
+</pre>
+                    </td>
+                    <td>
+                        <pre>thinking
+arrow_left
+question
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Sample 2</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>:partying_face: :birthday: :sparkles:
+</pre>
+                    </td>
+                    <td>
+                        <pre>partying_face
+birthday
+sparkles
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Sample 3</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>no emoji here
+</pre>
+                    </td>
+                    <td>
+                        <pre></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

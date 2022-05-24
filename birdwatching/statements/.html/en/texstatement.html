@@ -1,0 +1,170 @@
+<div class="problem-statement problem-statement_type_markdown">
+    <div class="header">
+        <h1 class="title">Birdwatching</h1>
+        <table class="limits">
+            <tbody>
+                <tr class="time-limit">
+                    <td class="property-title">Time limit</td>
+                    <td>2.5 seconds</td>
+                </tr>
+                <tr class="memory-limit">
+                    <td class="property-title">Memory limit</td>
+                    <td>64.0 MB</td>
+                </tr>
+                <tr class="input-file">
+                    <td class="property-title">Input</td>
+                    <td colSpan="1">stdin or input.txt</td>
+                </tr>
+                <tr class="output-file">
+                    <td class="property-title">Output</td>
+                    <td colSpan="1">stdout or output.txt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2></h2>
+    <div class="legend">
+        <div class="Markdown">
+            <p class="paragraph">Maya likes birdwatching. She identifies the species of every bird she sees and writes it down into a list. For each of these birds she wants to know if she has already seen a bird of the same species or from the same genus. But there are so many birds in her list that she can&#x27;t do it by hand. Help her!</p>
+        </div>
+    </div>
+    <h2>Input format</h2>
+    <div class="input-specification">
+        <div class="Markdown">
+            <p class="paragraph">In the first line an integer <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> is given (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <mo>≤</mo>
+                                    <mi>N</mi>
+                                    <mo>≤</mo>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">1 \leq N \leq 10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>) — the number of entries in Maya&#x27;s list. In each of the next <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mi>N</mi>
+                                </mrow>
+                                <annotation encoding="application/x-tex">N</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> lines a scientific name of a bird species is given, consisting of two strings separated by a space. The first of these two strings is the name of the genus. For example, if <em>Corvus cornix</em> is the name of the species (hooded crow), then <em>Corvus</em> is the name of the genus it belongs to. Both strings consist of lowercase Latin letters, except for the first character of the genus name, which is an uppercase Latin letter. Both strings are 2 to 30 characters long (inclusive).</p>
+        </div>
+    </div>
+    <h2>Output format</h2>
+    <div class="output-specification">
+        <div class="Markdown">
+            <p class="paragraph">For each bird in Maya&#x27;s list output</p>
+            <ul>
+                <li><code>SPECIES</code> if a bird of the same species has already appeared in the list,</li>
+                <li><code>GENUS</code> if a bird in the same genus has already appeared in the list (but not a bird of the same species),</li>
+                <li><code>NEW</code> if no birds in that genus have appeared in the list before.</li>
+            </ul>
+        </div>
+    </div>
+    <h2></h2>
+    <div>
+        <h3 class="sample-tests-header">Sample 1</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>5
+Corvus cornix
+Motacilla alba
+Corvus corax
+Corvus cornix
+Pica pica
+</pre>
+                    </td>
+                    <td>
+                        <pre>NEW
+NEW
+GENUS
+SPECIES
+NEW
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Sample 2</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>3
+Turdus pilaris
+Turdus merula
+Turdus philomelos
+</pre>
+                    </td>
+                    <td>
+                        <pre>NEW
+GENUS
+GENUS
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Sample 3</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>2
+Parus major
+Dendrocopos major
+</pre>
+                    </td>
+                    <td>
+                        <pre>NEW
+NEW
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>Notes</h2>
+    <div class="notes">
+        <div class="Markdown">
+            <p class="paragraph">Notice that in the last example the two birds are different species. The species is determined by both words in the name, not just the second one.</p>
+        </div>
+    </div>
+</div>

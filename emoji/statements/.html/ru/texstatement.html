@@ -1,0 +1,141 @@
+<div class="problem-statement problem-statement_type_markdown">
+    <div class="header">
+        <h1 class="title">Эмодзи</h1>
+        <table class="limits">
+            <tbody>
+                <tr class="time-limit">
+                    <td class="property-title">Ограничение времени</td>
+                    <td>1 секунда</td>
+                </tr>
+                <tr class="memory-limit">
+                    <td class="property-title">Ограничение памяти</td>
+                    <td>64.0 Мб</td>
+                </tr>
+                <tr class="input-file">
+                    <td class="property-title">Ввод</td>
+                    <td colSpan="1">стандартный ввод или input.txt</td>
+                </tr>
+                <tr class="output-file">
+                    <td class="property-title">Вывод</td>
+                    <td colSpan="1">стандартный вывод или output.txt</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2></h2>
+    <div class="legend">
+        <div class="Markdown">
+            <p class="paragraph">В некоторых мессенджерах (например, Telegram, Discord, Slack) эмодзи можно записывать в виде строки (названия эмодзи), заключённой между двоеточиями. Например, <code>:smile:</code> превращается в 😄, а <code>:christmas_tree:</code> превращается в 🎄.</p>
+            <p class="paragraph">Вы работаете над проектом по анализу эмодзи. Вам дан текст, содержащий эмодзи, записанные в таком виде. Ваша цель — извлечь из этого текста названия использованных эмодзи.</p>
+        </div>
+    </div>
+    <h2>Формат ввода</h2>
+    <div class="input-specification">
+        <div class="Markdown">
+            <p class="paragraph">Дана одна строка длиной от <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>0</mn>
+                                </mrow>
+                                <annotation encoding="application/x-tex">0</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> до <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <semantics>
+                                <mrow>
+                                    <mn>1</mn>
+                                    <msup>
+                                        <mn>0</mn>
+                                        <mn>5</mn>
+                                    </msup>
+                                </mrow>
+                                <annotation encoding="application/x-tex">10^5</annotation>
+                            </semantics>
+                        </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> символов включительно. Строка может содержать заглавные и строчные латинские буквы, цифры, пробелы и знаки препинания в ASCII (<code>!&quot;#$%&amp;&#x27;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~</code>). В строке содержатся несколько (возможно, 0) эмодзи, записанных в виде <code>:emoji_name:</code>, где</p>
+            <ul>
+                <li><code>emoji_name</code> — непустая строка, не содержащая пробелов и двоеточий (название эмодзи),</li>
+                <li>слева от первого двоеточия обязательно стоит пробел или начало строки,</li>
+                <li>справа от второго двоеточия обязательно стоит пробел или конец строки.</li>
+            </ul>
+            <p class="paragraph">Гарантируется, что каждое двоеточие в строке является частью эмодзи.</p>
+        </div>
+    </div>
+    <h2>Формат вывода</h2>
+    <div class="output-specification">
+        <div class="Markdown">
+            <p class="paragraph">Выведите названия использованных эмодзи в том порядке, в каком они встречаются в тексте, каждое на отдельной строке. Двоеточия выводить не нужно. Если одно и то же эмодзи использовалось несколько раз, его название тоже нужно вывести несколько раз.</p>
+        </div>
+    </div>
+    <h2></h2>
+    <div>
+        <h3 class="sample-tests-header">Пример 1</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>To be, or not to be, :thinking: that :arrow_left: is the question :question:
+</pre>
+                    </td>
+                    <td>
+                        <pre>thinking
+arrow_left
+question
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 2</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>:partying_face: :birthday: :sparkles:
+</pre>
+                    </td>
+                    <td>
+                        <pre>partying_face
+birthday
+sparkles
+</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h3 class="sample-tests-header">Пример 3</h3>
+        <table class="sample-tests">
+            <thead>
+                <tr>
+                    <th>Ввод</th>
+                    <th>Вывод</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <pre>no emoji here
+</pre>
+                    </td>
+                    <td>
+                        <pre></pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
